@@ -124,7 +124,7 @@ fn run_commands(cmd_and_args: &Vec<String>) -> Vec<pid_t> {
 
     if pid == 0 {
       let mut cstrings = Vec::<CString>::new();
-      let mut arg_ptrs = Vec::<*const i8>::new();
+      let mut arg_ptrs = Vec::<*const u8>::new();
 
       cstrings.reserve(cmd.len());
       arg_ptrs.reserve(cmd.len() + 1);
